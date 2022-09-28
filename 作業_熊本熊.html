@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bear {
+      border-radius: 50%;
+      width: 400px;
+      height: 400px;
+      margin: auto;
+      background: black;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .bear::before {
+      content: "";
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+      position: absolute;
+      top: 50%;
+      right: -5%;
+      transform: translate(0, -50%);
+      background: red;
+    }
+
+    .bear::after {
+      content: "";
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+      position: absolute;
+      top: 50%;
+      left: -5%;
+      transform: translate(0, -50%);
+      background: red;
+    }
+
+    .nose {
+      width: 180px;
+      height: 120px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin: auto;
+    }
+
+    .nose::before {
+      content: "";
+      width: 40px;
+      height: 30px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .nose::after {
+      content: "";
+      width: 110px;
+      height: 40px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, 0);
+      margin: auto;
+    }
+
+    /* 耳朵 */
+    .ear-left {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      background: black;
+      position: absolute;
+      top: 0;
+      left: 8%;
+    }
+
+    .ear-left::after {
+      content: "";
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      background: white;
+      position: absolute;
+      top: 12%;
+      left: 12%;
+    }
+
+
+    .ear-right {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      background: black;
+      position: absolute;
+      top: 0;
+      right: 8%;
+    }
+
+    .ear-right::after {
+      content: "";
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      background: white;
+      position: absolute;
+      top: 12%;
+      right: 12%;
+    }
+
+    /* 眼睛 */
+    .eye-left {
+      width: 90px;
+      height: 90px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 15%;
+      left: 20%;
+    }
+
+    .eye-left::after {
+      content: "";
+      width: 70px;
+      height: 70px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .eye-right {
+      width: 90px;
+      height: 90px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 15%;
+      right: 20%;
+    }
+
+    .eye-right::after {
+      content: "";
+      width: 70px;
+      height: 70px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    /* 胸部 */
+    .v::before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      background: white;
+      position: absolute;
+      top: 75%;
+      left: 35%;
+      transform: skewX(40deg)
+    }
+
+    .v::after {
+      content: "";
+      width: 60px;
+      height: 60px;
+      background: white;
+      position: absolute;
+      top: 75%;
+      right: 35%;
+      transform: skewX(-40deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bear">
+    <div class="nose"></div>
+    <div class="ear-left"></div>
+    <div class="ear-right"></div>
+    <div class="eye-left"></div>
+    <div class="eye-right"></div>
+    <div class="v"></div>
+  </div>
+
+</body>
+
+</html>

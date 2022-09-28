@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 針筒body */
+    .syringe {
+      width: 500px;
+      height: 100px;
+      color: gray;
+      font-family: "微軟正黑體";
+      font-weight: bold;
+      line-height: 180px;
+      background: linear-gradient(180deg, white 0%, lightgray 60%, white 100%);
+      border: 1px solid lightgray;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* 針筒按壓處 */
+    .syringe::after {
+      content: "";
+      width: 50px;
+      height: 100px;
+      border: 1px solid lightgray;
+      background: linear-gradient(180deg, white 0%, lightgray 60%, white 100%);
+      border-radius: 10%;
+      position: absolute;
+      top: 0;
+      left: -20%;
+    }
+
+    .syringe::before {
+      content: "";
+      width: 50px;
+      height: 70px;
+      border: 1px solid lightgray;
+      background: linear-gradient(180deg, white 0%, lightgray 60%, white 100%);
+      position: absolute;
+      top: 50%;
+      left: -10.5%;
+      transform: translate(0, -50%);
+    }
+
+    /* 黃色 */
+    .box1 {
+      content: "";
+      width: 250px;
+      height: 100px;
+      background: linear-gradient(to right, black 20%, rgb(244, 244, 144) 20%);
+      /* border: 1px solid lightgray; */
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    /* 黃色上的漸層 */
+    .box1::after {
+      content: "";
+      width: 198px;
+      height: 99px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(211, 211, 211, 0.5) 60%, rgba(255, 255, 255, 0)100%);
+      border: 1px solid lightgray;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+    }
+
+    /* 黃色右邊的區塊 */
+    .box1::before {
+      content: "";
+      width: 50px;
+      height: 70px;
+      border: 1px solid lightgray;
+      background: linear-gradient(180deg, white 0%, lightgray 60%, white 100%);
+      border-radius: 10%;
+      position: absolute;
+      top: 50%;
+      right: -20%;
+      transform: translate(0, -50%);
+      z-index: -1;
+    }
+
+    .line-x {
+      width: 100px;
+      height: 10px;
+      border-top: solid gray 2px;
+      position: absolute;
+      left: 110%;
+      top: 50%;
+    }
+
+    /* 用漸層做 */
+    /* 左邊刻度 */
+    .line-y {
+      width: 250px;
+      height: 10px;
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 95%, gray 5%);
+      background-size: 10px, 100%;
+      position: absolute;
+      top: -1px;
+    }
+
+    /* 右邊刻度 */
+    .line-yy {
+      width: 190px;
+      height: 10px;
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 95%, gray 5%);
+      background-size: 10px, 100%;
+      position: absolute;
+      top: -1px;
+      right: 10px;
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="syringe">
+    Made in Taiwan
+    <div class="box1"></div>
+    <div class="line-x"></div>
+    <div class="line-y"></div>
+    <div class="line-yy"></div>
+  </div>
+
+</body>
+
+</html>
